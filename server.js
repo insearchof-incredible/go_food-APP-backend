@@ -16,11 +16,15 @@ const port =process.env.PORT || 8080;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://go-food-user.netlify.app",
+    origin: [
+      "https://go-food-user.netlify.app",
+      "https://go-food-admin.netlify.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // if you use cookies or auth headers
   })
 );
+
 
 
 // DB connection
