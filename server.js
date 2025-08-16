@@ -12,8 +12,16 @@ const app = express();
 const port =process.env.PORT || 8080;
 
 //middlewares
+//middlewares
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://go-food-user.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // if you use cookies or auth headers
+  })
+);
+
 
 // DB connection
 connectDB();
