@@ -18,7 +18,7 @@ app.use(
   cors({
     origin: [
       "https://go-food-user.netlify.app",
-      "https://go-food-admin.netlify.app"
+      "https://go-food-admin.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // if you use cookies or auth headers
